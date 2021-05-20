@@ -1,4 +1,4 @@
-package com.example.talim;
+package com.example.talim.Activity;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.talim.R;
 
 
 public class FirstWindow extends AppCompatActivity {

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -21,9 +22,9 @@ public class RegAcivity extends AppCompatActivity {
 
     private static final String KEY_ISM = "ism";
     private static final String KEY_FAMILIYA = "familiya";
-    private static final String KEY_EMAIL = "email";
-    private static final String KEY_PAROL = "parol";
-    private static final String NAME_SHARED = "parol";
+    public static final String KEY_EMAIL = "email";
+    public static final String KEY_PAROL = "parol";
+    public static final String NAME_SHARED = "parol";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,20 +53,22 @@ public class RegAcivity extends AppCompatActivity {
                 String parol = mParol.getText().toString();
                 String parolTak = mParolTak.getText().toString();
                 String email = mEmail.getText().toString();
+                Log.d("@@","ifff");
 
-                if (parol.equals(parolTak)
-                        && parol.length() >= 4
-                        && TextUtils.isEmpty(email)
-                        && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                    editor.putString(KEY_EMAIL, email);
-                    editor.putString(KEY_ISM, ism);
-                    editor.putString(KEY_FAMILIYA, familiya);
-                    editor.putString(KEY_PAROL, parol);
-                    editor.apply();
-
-                    startActivity(new Intent(RegAcivity.this, LoginActivity.class));
-                    finish();
-                }
+                editor.putString(KEY_EMAIL, email);
+                editor.putString(KEY_ISM, ism);
+                editor.putString(KEY_FAMILIYA, familiya);
+                editor.putString(KEY_PAROL, parol);
+                Log.d("@@","editor");
+                editor.apply();
+                startActivity(new Intent(RegAcivity.this, LoginActivity.class));
+                finish();
+//                if (parol.equals(parolTak)
+//                        && parol.length() >= 4
+//                        && TextUtils.isEmpty(email)
+//                        && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+//
+//                }
 
 
             }

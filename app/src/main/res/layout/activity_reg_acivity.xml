@@ -15,6 +15,8 @@
         app:srcCompat="@drawable/talim" />
 
     <EditText
+        android:padding="7dp"
+        android:background="@drawable/background"
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,6 +26,8 @@
         android:inputType="textEmailAddress" />
 
     <EditText
+        android:padding="7dp"
+        android:background="@drawable/background"
         android:id="@+id/editTextIsm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,6 +37,8 @@
         android:inputType="textPersonName" />
 
     <EditText
+        android:padding="7dp"
+        android:background="@drawable/background"
         android:id="@+id/editTextFamiliya"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,6 +48,8 @@
         android:inputType="textPersonName" />
 
     <EditText
+        android:padding="7dp"
+        android:background="@drawable/background"
         android:id="@+id/editTextParol"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,6 +59,8 @@
         android:inputType="numberPassword" />
 
     <EditText
+        android:padding="7dp"
+        android:background="@drawable/background"
         android:id="@+id/editTextParolTak"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,6 +77,8 @@
         android:text="@string/Qoida"></TextView>
 
     <Button
+        android:padding="7dp"
+        android:background="@drawable/background"
         android:layout_margin="5dp"
         android:id="@+id/btnReg"
         android:layout_width="match_parent"
@@ -84,6 +96,8 @@
         ></TextView>
 
         <TextView
+            android:padding="7dp"
+            android:background="@drawable/background"
             android:onClick="toLogin"
             android:layout_marginLeft="12dp"
             android:id="@+id/kirish"

@@ -1,5 +1,6 @@
 package com.example.talim;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,18 +13,18 @@ public class FirstWindow extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActionBar bar = getSupportActionBar();
+        bar.hide();
         setContentView(R.layout.activity_first_window);
 
-        Runnable runnable=new Runnable() {
+
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(FirstWindow.this,RegAcivity.class);
-                startActivity(intent);
+                startActivity(new Intent(FirstWindow.this, RegAcivity.class));
                 finish();
             }
-        };
+        }, 2000);
 
-        new Handler().postDelayed(runnable,2000);
-        finish();
     }
 }

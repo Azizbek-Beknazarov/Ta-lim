@@ -27,19 +27,24 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         initUI();
-        
-        String email = mEmail.getText().toString();
-        String parol = mParol.getText().toString();
-        preferences = getSharedPreferences(RegAcivity.NAME_SHARED, MODE_PRIVATE);
-        String test = preferences.getString(RegAcivity.KEY_EMAIL, null);
-        String testP = preferences.getString(RegAcivity.KEY_PAROL, null);
-        Log.d("@@", "prre");
-        if (email.equals(test) && parol.equals(testP)) {
-            Log.d("@@", "test");
-            startActivity(new Intent(LoginActivity.this, UniversityActivity.class));
-        }else {
-            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
-        }
+        mKirish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = mEmail.getText().toString();
+                String parol = mParol.getText().toString();
+                preferences = getSharedPreferences(RegAcivity.NAME_SHARED, MODE_PRIVATE);
+                String test = preferences.getString(RegAcivity.KEY_EMAIL, "");
+                String testP = preferences.getString(RegAcivity.KEY_PAROL, "");
+                Log.d("@@", "prre");
+                if (email.equals(test) && parol.equals(testP)) {
+                    Log.d("@@", "test");
+                    startActivity(new Intent(LoginActivity.this, UniversityActivity.class));
+                }else {
+                    Toast.makeText(LoginActivity.this, "Email yoki parol xato!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
     }
 
     private void initUI() {

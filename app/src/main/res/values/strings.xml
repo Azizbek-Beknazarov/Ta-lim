@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Ta\'lim</string>
     <string name="Qoida">Roʻyxatdan oʻtib siz bizning Xavfsizlik siyosati va Qoidalarimizga roziligingizni bildirasiz.</string>
-<string name="resetPassTV">Roʻyxatdan oʻtish davomida foydalangan emailingizni kiriting. Maxfiy kod shu elektron manzilga yuboriladi.</string>
+    <string name="resetPassTV">Roʻyxatdan oʻtish davomida foydalangan emailingizni kiriting. Maxfiy kod shu elektron manzilga yuboriladi.</string>
 </resources>

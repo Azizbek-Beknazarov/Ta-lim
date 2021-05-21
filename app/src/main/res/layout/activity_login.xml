@@ -16,7 +16,7 @@
 
     <EditText
         android:padding="7dp"
-        android:background="@drawable/background"
+        android:background="@drawable/back_et"
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
 
     <EditText
         android:padding="7dp"
-        android:background="@drawable/background"
+        android:background="@drawable/back_et"
         android:id="@+id/editTextParol"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
 
         <TextView
             android:padding="7dp"
-            android:background="@drawable/background"
+            android:background="@drawable/back_et"
             android:onClick="toResetPassword"
             android:layout_marginLeft="12dp"
             android:id="@+id/qaytaTiklash"

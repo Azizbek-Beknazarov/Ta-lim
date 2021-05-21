@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:id="@+id/univercity"
-    android:icon="@drawable/ic_uni"
-    android:title="Universitetlar"></item>
+    <item
+        android:id="@+id/univercity"
+        android:icon="@drawable/ic_uni"
+        android:title="Universitetlar"></item>
+    <item
+        android:id="@+id/yangiliklar"
+        android:icon="@drawable/ic_yangi"
+        android:title="Yangiliklar"></item>
+    <item
+        android:id="@+id/obuna"
+        android:icon="@drawable/ic_baseline_subscriptions_24"
+        android:title="Obunalar"></item>
 </menu>

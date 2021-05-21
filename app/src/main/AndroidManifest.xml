@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Talim">
-        <activity android:name=".Activity.ResetPassword"></activity>
+        <activity android:name=".Activity.KursDetailActivity"></activity>
+        <activity android:name=".Activity.FanActivity" />
+        <activity android:name=".Activity.ResetPassword" />
         <activity android:name=".Activity.UniversityActivity" />
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.RegAcivity" />
@@ -20,7 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.MainActivity" />
     </application>
 
 </manifest>

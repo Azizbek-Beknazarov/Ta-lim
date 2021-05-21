@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2196F3"
-    tools:context=".Activity.UniversityActivity">
+    tools:context=".Activity.FanActivity">
 
     <EditText
-        android:id="@+id/izlash"
+        android:id="@+id/izlash_f"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -22,26 +22,12 @@
         android:textColorHint="#0A2CF1"></EditText>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rec_uni"
+        android:id="@+id/rec_fan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottom_nav"
-        android:layout_below="@id/izlash"
-        tools:listitem="@layout/uni_item_row"></androidx.recyclerview.widget.RecyclerView>
+        android:layout_below="@id/izlash_f"
+        tools:listitem="@layout/item_row_fan"></androidx.recyclerview.widget.RecyclerView>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#A1D4FD"
-        app:itemIconSize="30dp"
-        app:itemIconTint="#2443EC"
-        app:itemTextColor="#2643E8"
-        app:menu="@menu/bottom_menu"
-
-
-        ></com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 </RelativeLayout>

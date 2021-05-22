@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#CBECFB"
+    tools:context=".Activity.UserActivity">
+
+    <ImageView
+        android:background="@drawable/back_et"
+        android:id="@+id/im_user"
+        android:layout_width="match_parent"
+        android:layout_height="173dp"
+        android:layout_margin="22dp"
+        android:src="@drawable/ic_user" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/im_user"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="22dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="3dp"
+        android:text="TextView"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="22dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="3dp"
+        android:textStyle="bold|italic"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView4"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="22dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="3dp"
+
+        android:textStyle="bold|italic"
+        android:text="TextView" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_u"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#A1D4FD"
+        app:itemIconSize="30dp"
+        app:itemIconTint="#2443EC"
+        app:itemTextColor="#2643E8"
+        app:menu="@menu/bottom_menu"
+
+
+        ></com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</RelativeLayout>

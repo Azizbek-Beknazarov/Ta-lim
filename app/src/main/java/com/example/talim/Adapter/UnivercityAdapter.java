@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.talim.Activity.FanActivity;
+import com.example.talim.Model.FanData;
 import com.example.talim.Model.UnivercityData;
 import com.example.talim.R;
 
@@ -42,7 +43,9 @@ public class UnivercityAdapter extends RecyclerView.Adapter<UnivercityAdapter.Vi
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(mContext.getApplicationContext(), FanActivity.class);
+                Intent intent=new Intent(mContext, FanActivity.class);
+                intent.putExtra("fan",mList.get(position).getName_uni());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(intent);
             }
         });
@@ -53,10 +56,9 @@ public class UnivercityAdapter extends RecyclerView.Adapter<UnivercityAdapter.Vi
         return mList.size();
     }
 
-    public void filterList(List<UnivercityData> univercityData) {
-        univercityData = mList;
+    public void filterList(List<UnivercityData> filteredList){
+        mList=filteredList;
         notifyDataSetChanged();
-
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

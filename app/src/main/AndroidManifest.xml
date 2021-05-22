@@ -2,14 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.talim">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/talimic"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Talim">
-        <activity android:name=".Activity.KursDetailActivity"></activity>
+        <activity android:name=".Activity.UserActivity"></activity>
+        <activity android:name=".Activity.ObunaActivity" />
+        <activity android:name=".Activity.YangilikActivity" />
+        <activity android:name=".Activity.SinovDarsActivity" />
+        <activity android:name=".Activity.KursDetailActivity" />
         <activity android:name=".Activity.FanActivity" />
         <activity android:name=".Activity.ResetPassword" />
         <activity android:name=".Activity.UniversityActivity" />

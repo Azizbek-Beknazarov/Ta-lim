@@ -12,6 +12,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.talim.R;
 
@@ -20,8 +21,8 @@ public class RegAcivity extends AppCompatActivity {
     Button mRegBtn;
     SharedPreferences mPreferences;
 
-    private static final String KEY_ISM = "ism";
-    private static final String KEY_FAMILIYA = "familiya";
+    public static final String KEY_ISM = "ism";
+    public static final String KEY_FAMILIYA = "familiya";
     public static final String KEY_EMAIL = "email";
     public static final String KEY_PAROL = "parol";
     public static final String NAME_SHARED = "parol";
@@ -35,8 +36,8 @@ public class RegAcivity extends AppCompatActivity {
 
         initUI();
         mPreferences = getSharedPreferences(NAME_SHARED, MODE_PRIVATE);
-        String test = mPreferences.getString(KEY_EMAIL, null);
-        if (test != null) {
+        String test = mPreferences.getString(KEY_EMAIL, "");
+        if (test != "") {
             Intent intent = new Intent(RegAcivity.this, UniversityActivity.class);
             startActivity(intent);
             finish();
@@ -47,30 +48,29 @@ public class RegAcivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 checkInfo();
-                SharedPreferences.Editor editor = mPreferences.edit();
+
                 String ism = mIsm.getText().toString();
                 String familiya = mFamiliya.getText().toString();
                 String parol = mParol.getText().toString();
                 String parolTak = mParolTak.getText().toString();
                 String email = mEmail.getText().toString();
-                Log.d("@@","ifff");
 
-                editor.putString(KEY_EMAIL, email);
-                editor.putString(KEY_ISM, ism);
-                editor.putString(KEY_FAMILIYA, familiya);
-                editor.putString(KEY_PAROL, parol);
-                Log.d("@@","editor");
-                editor.apply();
-                startActivity(new Intent(RegAcivity.this, LoginActivity.class));
-                finish();
-//                if (parol.equals(parolTak)
-//                        && parol.length() >= 4
-//                        && TextUtils.isEmpty(email)
-//                        && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-//
-//                }
+                if ((parol.equals(parolTak))&&!parol.isEmpty()
+                        && !TextUtils.isEmpty(email)
+                        && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
 
+                    SharedPreferences.Editor editor = mPreferences.edit();
+                    editor.putString(KEY_EMAIL, email);
+                    editor.putString(KEY_ISM, ism);
+                    editor.putString(KEY_FAMILIYA, familiya);
+                    editor.putString(KEY_PAROL, parol);
+                    editor.apply();
+                    Toast.makeText(RegAcivity.this, "Muvaffaqiyatli!", Toast.LENGTH_SHORT).show();
 
+                    startActivity(new Intent(RegAcivity.this, UniversityActivity.class));
+                    finish();
+
+                }
             }
         });
 
@@ -88,7 +88,10 @@ public class RegAcivity extends AppCompatActivity {
             mParol.setError("Parolni kiriting!");
         }
         if (ispassword(mParolTak)==false) {
-            mParolTak.setError("Parollar mos emas!");
+            mParolTak.setError("Parolni kiriting!");
+        }
+        if (!mParol.equals(mParolTak)){
+            Toast.makeText(this, "Parollar mos emas.", Toast.LENGTH_SHORT).show();
         }
         if (isemail(mEmail)==false) {
             mEmail.setError("Emailingizni kiriting!");

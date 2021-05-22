@@ -11,6 +11,8 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 
 import com.example.talim.Adapter.FanAdapter;
+import com.example.talim.Model.FanDB;
+import com.example.talim.Model.FanDao;
 import com.example.talim.Model.FanData;
 import com.example.talim.R;
 
@@ -23,7 +25,6 @@ public class FanActivity extends AppCompatActivity {
     List<FanData> mFanlarData;
     EditText mSearch;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,20 +32,20 @@ public class FanActivity extends AppCompatActivity {
         bar.hide();
         setContentView(R.layout.activity_fan);
 
-        setupUI();
-
         mFanlarData = new ArrayList<>();
         mFanlarData.add(new FanData("Ona tili", "Anvar Narzullayev", R.drawable.ona));
-        mFanlarData.add(new FanData("Matematika", "Shaxzod", R.drawable.math));
-        mFanlarData.add(new FanData("Fizika", "Murod", R.drawable.fizika));
-        mFanlarData.add(new FanData("Kimyo", "Javohir", R.drawable.kimyo));
-        mFanlarData.add(new FanData("Biologiya", "Malika", R.drawable.biologiya));
-        mFanlarData.add(new FanData("Astronomiya", "Abror", R.drawable.astronomiya));
-        mFanlarData.add(new FanData("Geografiya", "Ozoda", R.drawable.geo));
-        mFanlarData.add(new FanData("Tarix", "Otabek", R.drawable.terix));
+        mFanlarData.add(new FanData("Matematika", "Shaxzod Gafurov", R.drawable.math));
+        mFanlarData.add(new FanData("Fizika", "Murod Qochqorov", R.drawable.fizika));
+        mFanlarData.add(new FanData("Kimyo", "Javohir Sirojiddinov", R.drawable.kimyo));
+        mFanlarData.add(new FanData("Biologiya", "Malika Toirova", R.drawable.biologiya));
+        mFanlarData.add(new FanData("Astronomiya", "Abror Hakimov", R.drawable.astronomiya));
+        mFanlarData.add(new FanData("Geografiya", "Ozoda Haydarova", R.drawable.geo));
+        mFanlarData.add(new FanData("Tarix", "Otabek Sultonov", R.drawable.terix));
 
         setFanlarRecycler(mFanlarData);
 
+
+        mSearch = findViewById(R.id.izlash_f);
         mSearch.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -73,10 +74,6 @@ public class FanActivity extends AppCompatActivity {
         adapter.filterList(filteredList);
     }
 
-
-    private void setupUI() {
-        mSearch = findViewById(R.id.izlash_f);
-    }
 
     private void setFanlarRecycler(List<FanData> fanlarData) {
         mRecyclerView = findViewById(R.id.rec_fan);

@@ -33,14 +33,14 @@ public class FanActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fan);
 
         mFanlarData = new ArrayList<>();
-        mFanlarData.add(new FanData("Ona tili", "Anvar Narzullayev", R.drawable.ona));
-        mFanlarData.add(new FanData("Matematika", "Shaxzod Gafurov", R.drawable.math));
-        mFanlarData.add(new FanData("Fizika", "Murod Qochqorov", R.drawable.fizika));
-        mFanlarData.add(new FanData("Kimyo", "Javohir Sirojiddinov", R.drawable.kimyo));
-        mFanlarData.add(new FanData("Biologiya", "Malika Toirova", R.drawable.biologiya));
-        mFanlarData.add(new FanData("Astronomiya", "Abror Hakimov", R.drawable.astronomiya));
-        mFanlarData.add(new FanData("Geografiya", "Ozoda Haydarova", R.drawable.geo));
-        mFanlarData.add(new FanData("Tarix", "Otabek Sultonov", R.drawable.terix));
+        mFanlarData.add(new FanData("", "Temir yo'llar", R.drawable.temir));
+        mFanlarData.add(new FanData("", "Avtomobil yo'llari", R.drawable.avto1));
+        mFanlarData.add(new FanData("", "Aviatsiya", R.drawable.aviat));
+        mFanlarData.add(new FanData("", "Rus tili", R.drawable.rus));
+        mFanlarData.add(new FanData("", "Ingliz tili", R.drawable.english));
+        mFanlarData.add(new FanData("", "Astronomiya", R.drawable.astro));
+        mFanlarData.add(new FanData("", "Biologiya", R.drawable.biol));
+
 
         setFanlarRecycler(mFanlarData);
 

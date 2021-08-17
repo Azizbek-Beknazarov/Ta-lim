@@ -44,7 +44,7 @@ public class KursDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(KursDetailActivity.this, SinovDarsActivity.class);
-                intent.putExtra("fan",mFannomi.getText().toString());
+                intent.putExtra("uqituvchi",mUqituvchiIsmi.getText().toString());
                 startActivity(intent);
             }
         });

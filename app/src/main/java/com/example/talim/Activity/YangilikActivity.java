@@ -49,6 +49,10 @@ public class YangilikActivity extends AppCompatActivity {
         mList.add(new YangilikData("", "Kadirov Dev", R.drawable.kadirov));
         mList.add(new YangilikData("", "Sariq Dev", R.drawable.sariq));
         mList.add(new YangilikData("", "Davronbek Turdiyev", R.drawable.davron));
+        mList.add(new YangilikData("", "Farkhod Dadajanov", R.drawable.farhod));
+        mList.add(new YangilikData("", "Umidjon Ishmukhamedov", R.drawable.umid));
+        mList.add(new YangilikData("", "Bobir Akilkhanov", R.drawable.bobir));
+        mList.add(new YangilikData("", "Abdukarim Mirzayev", R.drawable.abdukarim));
 
 
         mRecyclerView = findViewById(R.id.rec_yan);

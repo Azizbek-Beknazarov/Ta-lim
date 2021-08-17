@@ -7,7 +7,7 @@
     <item
         android:id="@+id/yangiliklar"
         android:icon="@drawable/ic_yangi"
-        android:title="Yangiliklar"></item>
+        android:title="YouTube"></item>
     <item
         android:id="@+id/obuna"
         android:icon="@drawable/ic_baseline_subscriptions_24"

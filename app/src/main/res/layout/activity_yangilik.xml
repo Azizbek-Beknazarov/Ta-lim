@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2196F3"
+    android:background="#F4F6F8"
     tools:context=".Activity.YangilikActivity">
 
     <EditText
@@ -34,10 +34,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#A1D4FD"
+
         app:itemIconSize="30dp"
-        app:itemIconTint="#2443EC"
-        app:itemTextColor="#2643E8"
+        android:background="#F1F7FB"
+        app:itemIconTint="#9C27B0"
+        app:itemTextColor="#9C27B0"
         app:menu="@menu/bottom_menu"
         ></com.google.android.material.bottomnavigation.BottomNavigationView>
 

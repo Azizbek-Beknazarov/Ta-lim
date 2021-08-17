@@ -10,10 +10,11 @@
     app:cardCornerRadius="19dp">
 
     <TextView
+        android:layout_margin="9dp"
         android:background="@drawable/background"
         android:textSize="20dp"
         android:gravity="center"
-        android:textColor="#0F2FE6"
+        android:textColor="#FFFFFF"
         android:id="@+id/uni_tv"
         android:layout_width="match_parent"
         android:layout_height="65dp"

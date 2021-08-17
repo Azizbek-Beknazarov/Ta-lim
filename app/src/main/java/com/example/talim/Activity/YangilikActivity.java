@@ -42,14 +42,13 @@ public class YangilikActivity extends AppCompatActivity {
         bar.hide();
         setContentView(R.layout.activity_yangilik);
 
-        mList.add(new YangilikData("Ona tili", "Anvar Narzullayev", R.drawable.ona));
-        mList.add(new YangilikData("Matematika", "Shaxzod Gafurov", R.drawable.math));
-        mList.add(new YangilikData("Fizika", "Murod Qochqorov", R.drawable.fizika));
-        mList.add(new YangilikData("Kimyo", "Javohir Sirojiddinov", R.drawable.kimyo));
-        mList.add(new YangilikData("Biologiya", "Malika Toirova", R.drawable.biologiya));
-        mList.add(new YangilikData("Astronomiya", "Abror Hakimov", R.drawable.astronomiya));
-        mList.add(new YangilikData("Geografiya", "Ozoda Haydarova", R.drawable.geo));
-        mList.add(new YangilikData("Tarix", "Otabek Sultonov", R.drawable.terix));
+        mList.add(new YangilikData("", "MFaktor", R.drawable.mfaktor));
+        mList.add(new YangilikData("", "Osmondagi Bolalar", R.drawable.osmon));
+        mList.add(new YangilikData("", "Patronlar Ligasi", R.drawable.patron));
+        mList.add(new YangilikData("", "PDP Academy", R.drawable.pdp));
+        mList.add(new YangilikData("", "Kadirov Dev", R.drawable.kadirov));
+        mList.add(new YangilikData("", "Sariq Dev", R.drawable.sariq));
+        mList.add(new YangilikData("", "Davronbek Turdiyev", R.drawable.davron));
 
 
         mRecyclerView = findViewById(R.id.rec_yan);

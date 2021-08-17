@@ -14,98 +14,78 @@
         android:layout_height="219dp"
         app:srcCompat="@drawable/talimk" />
 
-    <EditText
-        android:padding="7dp"
-        android:background="@drawable/back_et"
-        android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress" />
 
     <EditText
-        android:padding="7dp"
-        android:background="@drawable/back_et"
         android:id="@+id/editTextIsm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
+        android:background="@drawable/back_et"
         android:ems="10"
         android:hint="Ism"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:padding="7dp" />
 
     <EditText
-        android:padding="7dp"
-        android:background="@drawable/back_et"
         android:id="@+id/editTextFamiliya"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
+        android:background="@drawable/back_et"
         android:ems="10"
         android:hint="Familiya"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:padding="7dp" />
 
     <EditText
-        android:padding="7dp"
-        android:background="@drawable/back_et"
-        android:id="@+id/editTextParol"
+        android:id="@+id/editTextTel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        android:ems="10"
-        android:hint="Parol"
-        android:inputType="numberPassword" />
-
-    <EditText
-        android:padding="7dp"
         android:background="@drawable/back_et"
-        android:id="@+id/editTextParolTak"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
         android:ems="10"
-        android:hint="Parolni takrorlash"
-        android:inputType="numberPassword" />
+        android:hint="Telefon raqam"
+        android:inputType="phone"
+        android:padding="7dp" />
+
 
     <TextView
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
+        android:gravity="center"
         android:text="@string/Qoida"></TextView>
 
     <Button
-        android:padding="7dp"
-        android:background="@drawable/background"
-        android:layout_margin="5dp"
         android:id="@+id/btnReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/background"
+        android:padding="7dp"
         android:text="Ro'yxatdan o'tish" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <TextView
-        android:layout_marginLeft="12dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Accountga egamisiz?"
-        ></TextView>
 
         <TextView
-            android:padding="7dp"
-            android:background="@drawable/back_et"
-            android:onClick="toLogin"
-            android:layout_marginLeft="12dp"
-            android:id="@+id/kirish"
-            android:textSize="20dp"
-            android:textColor="#2196F3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kirish" />
+            android:layout_marginLeft="12dp"
+            android:text="Accountga egamisiz?"></TextView>
+
+        <TextView
+            android:id="@+id/kirish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/back_et"
+            android:padding="7dp"
+            android:text="Kirish"
+            android:textColor="#2196F3"
+            android:textSize="20dp" />
 
     </LinearLayout>
 

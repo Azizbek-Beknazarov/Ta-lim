@@ -35,11 +35,11 @@ public class UserActivity extends AppCompatActivity {
 
         String ism = mPreferences.getString(RegAcivity.KEY_ISM, "");
         String familiya = mPreferences.getString(RegAcivity.KEY_FAMILIYA, "");
-        String email = mPreferences.getString(RegAcivity.KEY_EMAIL, "");
+        String tel = mPreferences.getString(RegAcivity.KEY_TELNUMMER, "");
 
         mTextView3.setText("Ism: "+ism.toString());
         mTextView4.setText("Familiya: "+familiya.toString());
-        mTextView5.setText("Email: "+email.toString());
+        mTextView5.setText("Email: "+tel.toString());
 
         mNavigationView = findViewById(R.id.bottom_nav_u);
         mNavigationView.setSelectedItemId(R.id.user);

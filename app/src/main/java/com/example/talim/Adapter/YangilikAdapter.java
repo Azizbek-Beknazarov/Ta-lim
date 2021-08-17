@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.talim.Activity.KursDetailActivity;
+import com.example.talim.Activity.YouTubeYangiliklar;
 import com.example.talim.Model.FanData;
 import com.example.talim.Model.YangilikData;
 import com.example.talim.R;
@@ -48,10 +49,10 @@ public class YangilikAdapter extends RecyclerView.Adapter<YangilikAdapter.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(mContext, KursDetailActivity.class);
-                intent.putExtra("fan",mList.get(position).getFan_nomi());
+                Intent intent=new Intent(mContext, YouTubeYangiliklar.class);
+//                intent.putExtra("fan",mList.get(position).getFan_nomi());
                 intent.putExtra("uqituvchi",mList.get(position).getUqituvchi_ismi());
-                intent.putExtra("image_d",mList.get(position).getImageUrl());
+//                intent.putExtra("image_d",mList.get(position).getImageUrl());
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(intent);
             }
